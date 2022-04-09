@@ -106,9 +106,9 @@ var swiper = new Swiper(".gallary-swiper", {
     type: "fraction",
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-    disabledClass:'.swiper-button-disabled',
+    nextEl: '.gallary-button-next',
+    prevEl: '.gallary-button-prev',
+    disabledClass:'.gallary-button-disabled',
 },
 breakpoints: {
   // 1920: {
@@ -127,8 +127,8 @@ breakpoints: {
   },
 
   1000: {
-    slidesPerGroup:3,
-    slidesPerView: 3,
+    slidesPerGroup:2,
+    slidesPerView: 2,
     spaceBetween: 30,
   },
   767: {
@@ -142,6 +142,12 @@ breakpoints: {
     spaceBetween: 39
   },
 
+  450: {
+    slidesPerGroup:2,
+    slidesPerView: 2,
+    spaceBetween: 30
+  },
+
   100: {
     slidesPerGroup: 1,
     slidesPerView: 1,
@@ -152,10 +158,14 @@ breakpoints: {
 
 // Accordeon
 
-    jQuery(document).ready(function($){
-        $("#my-accordion").accordionjs({
-          activeIndex : false,
-        });
+    // jQuery(document).ready(function($){
+    //     $("#my-accordion").accordionjs({
+    //       activeIndex : false,
+    //     });
+    // });
+
+      jQuery(document).ready(function($){
+        $("#my-accordion").accordionjs( );
     });
 
     var tabNavs = document.querySelectorAll(".nav-tab");
@@ -193,6 +203,12 @@ breakpoints: {
           slidesPerView: 3,
           spaceBetween: 50,
         },
+
+        900: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+
         600: {
           slidesPerView: 2,
           spaceBetween: 50, 
@@ -236,7 +252,7 @@ breakpoints: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
-        768: {
+        640: {
           slidesPerView: 2,
         },
         100: {
@@ -259,6 +275,12 @@ new JustValidate('.form', {
             maxLength: 30
         }, 
 
+        messages: {
+          text1: {
+            tel: "Пожалуйста введите корректные данные",
+            name: "Введите корректное имя",
+          }
+        },
         tel: {
             required: true,
             function: (name, value) => {
