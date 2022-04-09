@@ -2390,6 +2390,7 @@ border-radius: 30px;
 }
 
 .js-validate-error-label {
+  color: #D11616;
   font-size: 11px;
   position: absolute;
   top: 33px;
