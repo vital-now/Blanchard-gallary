@@ -89,7 +89,10 @@ document.addEventListener("click", function(e) {
 const defaultSelect = () => {
   const element = document.querySelector('.js-choice');
   const choices = new Choices(element, {
-      searchEnabled: false
+      searchEnabled: false,
+      position: 'bottom',
+      itemSelectText: '',
+      shouldSort: false
   });
 
 };
@@ -108,7 +111,7 @@ var swiper = new Swiper(".gallary-swiper", {
   navigation: {
     nextEl: '.gallary-button-next',
     prevEl: '.gallary-button-prev',
-    disabledClass:'.gallary-button-disabled',
+    
 },
 breakpoints: {
   // 1920: {
@@ -211,7 +214,7 @@ breakpoints: {
 
         600: {
           slidesPerView: 2,
-          spaceBetween: 50, 
+          spaceBetween: 10, 
         },
         100: {
           slidesPerView: 1,
@@ -323,11 +326,17 @@ ymaps.ready(init);
 
 
 // Burger
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.header__burger').addEventListener('click', function() {
-    document.querySelector('.main-nav').classList.toggle('burger__active')
-  });
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   document.querySelector('.header__burger').addEventListener('click', function() {
+//     document.querySelector('.main-nav').classList.toggle('burger__active')
+//   });
+// });
+
+document.querySelector('.burger').addEventListener('click', function () {
+  document.querySelector('.burger').classList.toggle('burger--open')
+  document.querySelector('.header__nav').classList.toggle('header__nav--hidden')
+  document.querySelector('.header__enter').classList.toggle('header__enter--hidden')
+})
 
 
 // Search-mobile
@@ -389,4 +398,12 @@ const swiperHero = new Swiper(".hero-swiper", {
   autoplay: {
       delay: 7000,
   },
+});
+
+$('a[href^="#"').on('click', function() {
+  let href = $(this).attr('href');
+  $('html, body').animate({
+      scrollTop: $(href).offset().top
+  });
+  return false;
 });
