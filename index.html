@@ -9,38 +9,39 @@
     <link rel="stylesheet" href="styles/accordion.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    
+    <link rel="stylesheet" href="styles/normalize.css">  
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/adaptive.css">
+
+
     <title>Blanchard</title>
 </head>
 <body>
          <header class="header">  
-        <div class="header__top">
+         <div class="header__top"> 
           <div class="container header__container">
-            <button class="header__burger focus-outline contain burger" id="burger">
+            <button class="header__burger contain burger" id="burger">
 
             </button>
-            <a class="header__logo focus-outline" href="#"><img class="logo" src="/img/header/logo-1920.png" alt="Логотип Blanchard"></a>
-                <nav class="main-nav header-nav header__nav header__nav--hidden">
+            <a class="header__logo " href="#"><img class="logo" src="/img/header/logo-1920.png" alt="Логотип Blanchard"></a>
+                <nav class="main-nav header-nav header__nav header__nav--hidden header__enter">
                   <ul class="header-nav__list">
-                    <li class="header-nav__item"><a class="header__nav-btn  focus-outline" href="#about">О нас</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  focus-outline" href="#gallery">Галерея</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  focus-outline" href="#faq">Каталог</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  focus-outline" href="#event">События</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  focus-outline" href="#project">Проекты</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  focus-outline" href="#contact">Контакты</a></li>
+                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#about-section" onclick="slowScroll('#about-section')">О нас</a></li>
+                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#gallery-section" onclick="slowScroll('#gallery-section')">Галерея</a></li>
+                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#faq-section" onclick="slowScroll('#faq-section')">Каталог</a></li>
+                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#event-section" onclick="slowScroll('#event-section')">События</a></li>
+                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#project-section" onclick="slowScroll('#project-section')">Проекты</a></li>
+                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#contact-section" onclick="slowScroll('#contact-section')">Контакты</a></li>
                   </ul>
-                  <a class="header__nav-btn header__nav-link    main-nav__enter burger-enter btn" aria-label="Войти под своим логином" href="#" tabindex="0">
+                  <button class="header__nav-btn header__nav-link    main-nav__enter burger-enter btn" aria-label="Войти под своим логином" href="#" tabindex="0">
                     <svg class="main-nav-icon burger-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
                       </svg>
                        Войти
-                  </a>
+                  </button>
                 </nav>
         
-            <a class="header__nav-btn header__nav-link header__enter_link  focus-outline  " aria-label="Войти под своим логином" tabindex="0"> 
+            <a class="header__nav-btn header__nav-link header__enter_link  header__nav-link" aria-label="Войти под своим логином" tabindex="0"> 
               <svg class="main-nav-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
                 </svg>
@@ -52,7 +53,7 @@
               <input class="header__input" type="search" name="Search" aria-label="Поиск по сайту">
             </form>
           </div>
-        </div>
+        </div> 
 
 
 
@@ -70,21 +71,21 @@
                               </button>
                               <div class="container__dropdown">
                                 <ul class="container__dropdown-list" data-simplebar >
-                                  <li class="container__dropdown-item tintiretto button outline-focus" >
-                                    <a class="btn dropdown-button ">Тинторетто</a>
+                                  <li class="container__dropdown-item tintiretto button " >
+                                    <a href class="btn dropdown-button focus-outline">Тинторетто</a>
                                   </li>
-                                  <li class="container__dropdown-item fridrich button outline-focus">
+                                  <li class="container__dropdown-item fridrich button ">
+                                    <a href class="btn dropdown-button focus-outline">Фридрих</a>
+                                  </li>
+                                  <li class="container__dropdown-item leonardo button ">
+                                    <a href class="btn dropdown-button focus-outline">Леонардо</a>
+                                  </li>
+                                  <li class="container__dropdown-item verrokio button ">
+                                    <a href class="btn dropdown-button focus-outline">Верроккьо</a>
+                                  </li>
+                                  <!-- <li class="container__dropdown-item fridrich-1 button outline-focus">
                                     <a class="btn dropdown-button ">Фридрих</a>
-                                  </li>
-                                  <li class="container__dropdown-item leonardo button outline-focus">
-                                    <a class="btn dropdown-button ">Леонардо</a>
-                                  </li>
-                                  <li class="container__dropdown-item verrokio button outline-focus">
-                                    <a class="btn dropdown-button ">Верроккьо</a>
-                                  </li>
-                                  <li class="container__dropdown-item fridrich-1 button outline-focus">
-                                    <a class="btn dropdown-button ">Фридрих</a>
-                                  </li>
+                                  </li> -->
                                 </ul>
                               </div>
                               </li>
@@ -96,21 +97,21 @@
                               </button>
                               <div class="container__dropdown">
                                 <ul class="container__dropdown-list" data-simplebar>
-                                  <li class="container__dropdown-item mone button outline-focus">
-                                    <a class="btn dropdown-button ">Моне</a>
+                                  <li class="container__dropdown-item mone button ">
+                                    <a href class="btn dropdown-button focus-outline">Моне</a>
                                   </li>
-                                  <li class="container__dropdown-item sisley button outline-focus">
+                                  <li class="container__dropdown-item sisley button ">
+                                    <a href class="btn dropdown-button focus-outline">Сислей</a>
+                                  </li>
+                                  <li class="container__dropdown-item mane button ">
+                                    <a href class="btn dropdown-button focus-outline">Мане</a>
+                                  </li>
+                                  <li class="container__dropdown-item renuar button ">
+                                    <a href class="btn dropdown-button focus-outline">Ренуар</a>
+                                  </li>
+                                  <!-- <li class="container__dropdown-item sisley-1 button outline-focus">
                                     <a class="btn dropdown-button ">Сислей</a>
-                                  </li>
-                                  <li class="container__dropdown-item mane button outline-focus">
-                                    <a class="btn dropdown-button ">Мане</a>
-                                  </li>
-                                  <li class="container__dropdown-item renuar button outline-focus">
-                                    <a class="btn dropdown-button ">Ренуар</a>
-                                  </li>
-                                  <li class="container__dropdown-item sisley-1 button outline-focus">
-                                    <a class="btn dropdown-button ">Сислей</a>
-                                  </li>
+                                  </li> -->
                                 </ul>
                               </div>
                               </li>
@@ -122,21 +123,21 @@
                               </button>
                               <div class="container__dropdown">
                                 <ul class="container__dropdown-list" data-simplebar>
-                                  <li class="container__dropdown-item van-gogh button outline-focus">
-                                    <a class="btn dropdown-button ">Ван Гог</a>
+                                  <li class="container__dropdown-item van-gogh button ">
+                                    <a href class="btn dropdown-button focus-outline">Ван Гог</a>
                                   </li>
-                                  <li class="container__dropdown-item sezan button outline-focus">
-                                    <a class="btn dropdown-button ">Сезан</a>
+                                  <li class="container__dropdown-item sezan button ">
+                                    <a href class="btn dropdown-button focus-outline">Сезан</a>
                                   </li>
-                                  <li class="container__dropdown-item gogen button outline-focus">
-                                    <a class="btn dropdown-button ">Гоген</a>
+                                  <li class="container__dropdown-item gogen button ">
+                                    <a href class="btn dropdown-button focus-outline">Гоген</a>
                                   </li>
-                                  <li class="container__dropdown-item siera button outline-focus">
-                                    <a class="btn dropdown-button ">Сёра</a>
+                                  <li class="container__dropdown-item siera button ">
+                                    <a href class="btn dropdown-button focus-outline">Сёра</a>
                                   </li>
-                                  <li class="container__dropdown-item van-gogh-1 button outline-focus">
+                                  <!-- <li class="container__dropdown-item van-gogh-1 button outline-focus">
                                     <a class="btn dropdown-button  ">Ван гог</a>
-                                  </li>
+                                  </li> -->
                                 </ul>
                               </div>
                               </li>
@@ -148,21 +149,21 @@
                               </button>
                               <div class="container__dropdown" >
                                 <ul class="container__dropdown-list" data-simplebar >
-                                  <li class="container__dropdown-item kandinskiy button outline-focus">
-                                    <a class=" btn dropdown-button  " href="#">Кандинский</a>
+                                  <li class="container__dropdown-item kandinskiy button ">
+                                    <a href class=" btn dropdown-button focus-outline" href="#">Кандинский</a>
                                   </li>
-                                  <li class="container__dropdown-item marinetty button outline-focus">
+                                  <li class="container__dropdown-item marinetty button ">
+                                    <a href class=" btn dropdown-button focus-outline ">Маринетти</a>
+                                  </li>
+                                  <li class="container__dropdown-item malevich button ">
+                                    <a href class=" btn dropdown-button focus-outline ">Малевич</a>
+                                  </li>
+                                  <li class="container__dropdown-item pikasso button ">
+                                    <a href class=" btn dropdown-button focus-outline  ">Пикассо</a>
+                                  </li>
+                                  <!-- <li class="container__dropdown-item marinetty-1 button outline-focus">
                                     <a class=" btn dropdown-button  ">Маринетти</a>
-                                  </li>
-                                  <li class="container__dropdown-item malevich button outline-focus">
-                                    <a class=" btn dropdown-button  ">Малевич</a>
-                                  </li>
-                                  <li class="container__dropdown-item pikasso button outline-focus">
-                                    <a class=" btn dropdown-button   ">Пикассо</a>
-                                  </li>
-                                  <li class="container__dropdown-item marinetty-1 button outline-focus">
-                                    <a class=" btn dropdown-button  ">Маринетти</a>
-                                  </li>
+                                  </li> -->
                                 </ul>
                               </div>
                               </li>
@@ -174,21 +175,21 @@
                                 </button>
                                 <div class="container__dropdown" >
                                   <ul class="container__dropdown-list" data-simplebar >
-                                    <li class="container__dropdown-item button outline-focus karra">
-                                      <a class="btn dropdown-button  "> Карра</a>
+                                    <li class="container__dropdown-item button  karra">
+                                      <a href class="btn dropdown-button  focus-outline"> Карра</a>
                                     </li>
-                                    <li class="container__dropdown-item button outline-focus pratella">
-                                      <a class="btn dropdown-button ">Прателла</a>
+                                    <li class="container__dropdown-item button  pratella">
+                                      <a href class="btn dropdown-button focus-outline">Прателла</a>
                                     </li>
-                                    <li class="container__dropdown-item button outline-focus severiny">
-                                      <a class="btn dropdown-button ">Северини</a>
+                                    <li class="container__dropdown-item button  severiny">
+                                      <a href class="btn dropdown-button focus-outline">Северини</a>
                                     </li>
-                                    <li class="container__dropdown-item button outline-focus balla">
-                                      <a class="btn dropdown-button ">Балла</a>
+                                    <li class="container__dropdown-item button  balla">
+                                      <a href class="btn dropdown-button focus-outline">Балла</a>
                                     </li>
-                                    <li class="container__dropdown-item button outline-focus verrokio-2">
+                                    <!-- <li class="container__dropdown-item button outline-focus verrokio-2">
                                       <a class="btn dropdown-button ">Веррикио</a>
-                                    </li>
+                                    </li> -->
                                   </ul>
                                 </div>
                                 </li>
@@ -234,7 +235,7 @@
 
             <a
               class="btn hero-content__btn button hero__button outline-focus"
-              href="#contact"
+              href="#contact" onclick="slowScroll('#contact-section')"
               aria-label="Кнопка для подписки на рассылку от художественной галереи Blanchard"
             >
               Подписаться на рассылку
@@ -243,7 +244,7 @@
                         </div>
       </section>
 
-      <section class="about" id="about"> 
+      <section class="about" id="about-section"> 
         <div class="container about-container">
           <h2 class="about-title">О нас</h2>
           <p class="about-discription">
@@ -252,13 +253,14 @@
         </div>
       </section> 
 
-       <section class="gallery" id="gallery">  
+       <section class="gallery" id="gallery-section">  
         <div class="gallery__container container">
          
           <div class="gallary-content">
             <div class="gallary-left-info">
               <h2 class="gallary-title">Галерея</h2>
               <div class="gallery__select">
+                
                 <span class="filter-span">Фильтр:</span>
                 <div class="select is-active">
                 
@@ -270,7 +272,7 @@
                 </div>
               </div>
               <div class="gallary-download">
-                <div class="border">
+                <!-- <div class="border">
                   <label class="container-cat">XIX век
                       <input type="checkbox" checked="checked">
                       <span class="checkmark"></span>
@@ -285,51 +287,70 @@
                       <input type="checkbox">
                       <span class="checkmark"></span>
                     </label>
+                </div> -->
+                <div class="gallery__check">
+                  <input type="checkbox" id="checkGallery1" class="gallery__checkbox">
+                  <label for="checkGallery1" class="gallery__check-label">
+                    <span class="gallery__span"></span>
+                    XIX&nbsp;век
+                  </label>
+                  <input type="checkbox" id="checkGallery2" class="gallery__checkbox">
+                  <label for="checkGallery2" class="gallery__check-label">
+                    <span class="gallery__span"></span>
+                    XX&nbsp;век
+                  </label> 
+                  <input type="checkbox" id="checkGallery3" class="gallery__checkbox">
+                  <label for="checkGallery3" class="gallery__check-label">
+                    <span class="gallery__span"></span>
+                    Современность
+                  </label>
                 </div>
               </div>
-              
+           
             </div>
   
             <div class="gallery__right">
               <div class="swiper mySwiper gallary-swiper">
                 <div class="slider-button swiper-button">
-                  <div class="swiper-button-next ">
-                    <svg class="gallary-button-next " width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- <button class="swiper-button-next ">
+                     <svg class="gallary-button-next " width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#666666"/>
                       <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="black"/>
                       <path d="M14 20L19 15L14 10" stroke="white"/>
-                      </svg>
+                      </svg> 
                       
-                  </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-button-prev ">
+                  </button> -->
+                  <div class="swiper-pagination gallery__pagination"></div>
+                  <div class="swiper-button-prev gallery__btn-prev"></div>
+                  <div class="swiper-button-next gallery__btn-next"></div>
+                  <!-- <button class="swiper-button-prev ">
                     <svg class=" gallary-button-prev " width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#666666"/>
                       <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="black"/>
                       <path d="M16 20L11 15L16 10" stroke="white"/>
                       </svg>
                       
-                  </div>
+                  </button> -->
                 </div>
                 <div class="swiper-wrapper gallary-swiper-wraper">
-                  <div class="swiper-slide gallary-swiper-slide gallary-slide-1-1 ">
+                  <button class="swiper-slide gallary-swiper-slide gallary-slide-1-1 ">
                       <img class="gallary-slide-image" src="img/gallary/gallary-slide-1-1.png" alt="">
-                  </div>
-                  <div class="swiper-slide gallary-swiper-slide gallary-slide-1-2">
+                  </button>
+                  <button class="swiper-slide gallary-swiper-slide gallary-slide-1-2">
                       <img class="gallary-slide-image" src="img/gallary/gallary-slide-1-2.png" alt="">
-                  </div>
-                  <div class="swiper-slide gallary-swiper-slide gallary-slide-1-3">
+                  </button>
+                  <button class="swiper-slide gallary-swiper-slide gallary-slide-1-3">
                       <img class="gallary-slide-image" src="img/gallary/gallary-slide-1-3.png" alt="">
-                  </div>
-                  <div class="swiper-slide gallary-swiper-slide gallary-slide-1-4">
+                  </button>
+                  <button class="swiper-slide gallary-swiper-slide gallary-slide-1-4">
                       <img class="gallary-slide-image" src="img/gallary/gallary-slide-1-4.png" alt="">
-                  </div>
-                  <div class="swiper-slide gallary-swiper-slide gallary-slide-1-5">
+                  </button>
+                  <button class="swiper-slide gallary-swiper-slide gallary-slide-1-5">
                       <img class="gallary-slide-image" src="img/gallary/gallary-slide-1-5.png" alt="">
-                  </div>
-                  <div class="swiper-slide gallary-swiper-slide gallary-slide-1-6">
+                  </button>
+                  <button class="swiper-slide gallary-swiper-slide gallary-slide-1-6">
                       <img class="gallary-slide-image" src="img/gallary/gallary-slide-1-6.png" alt="">
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
@@ -337,7 +358,7 @@
         </div>
       </section>  
 
-         <section class="faq" id="faq">    
+         <section class="faq" id="faq-section">    
         <div class="container faq__container">
           <div class="faq-intro">
             <h2 class="about-title catalog-title">Каталог</h2>
@@ -347,8 +368,8 @@
           </div>
           <div class="faq__contant tab-content">
             <div class="faq__content-left-info">
-              <ul class="tab-content-item">
-                <li class="tab-content__item tab-pane active " data-tab-content="1">
+              <div class="tab-content-item">
+                <div class="tab-content__item tab-pane active " data-tab-content="1">
                   <div class="tab-content-image-main">
                     <img src="/img/catalog/catalog-title.jpg" alt="">
                   </div>
@@ -357,26 +378,26 @@
                   <p class="left-info-discr">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
                   </p>
-                </li>
-                <li class="tab-content__item tab-pane" data-tab-content="2">
+                </div>
+                <div class="tab-content__item tab-pane" data-tab-content="2">
                   <div class="tab-content-image">
                     <img class="image-unkown" src="/img/catalog/unknown.png" alt="">
                   </div>
                   <h3 class="left-info-titlr">Что мы о нем знаем?</h3>
                   <p class="left-info-discr">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
-                  <a class="left-info-link " href="">В галерею</a>
-                </li>
-              </ul>
+                  <a class="left-info-link " href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
+                </div>
+              </div>
             </div>
             <div class="faq__accordion tabs">
               <ul id="my-accordion" class="accordionjs">
                 <li class="accordion-item">
                   <div class="accordion-title accordion-title-main">
-                    <a class="accordion-title-link link-title-main">C 1400 по 1499 гг.</a>
+                    <button class="accordion-title-link link-title-main">C 1400 по 1499 гг.</button>
                     <span class="accordion-title-icon"> </span>
                   </div>
                   <div class="accordion-content ">
-                    <ul class="artist-item tab-header nav-tabs">
+                    <ul class="artist-item tab-header ">
                       <li class="artist-list ">
                         <button class="artist-link nav-tab  " data-tab="2">Бенедетто ди Биндо</button>
                       </li>
@@ -456,7 +477,7 @@
 
                 <li class="accordion-item">
                   <div class="accordion-title">
-                    <a class="accordion-title-link">C 1500 по 1599 гг.</a>
+                    <button class="accordion-title-link">C 1500 по 1599 гг.</button>
                   </div>
                   <div class="accordion-content">
                     <ul class="artist-unkown-item">
@@ -469,7 +490,7 @@
                           <h3 class="artist-unkown-title">Здесь пока пусто </h3>
                         <p class="artist-unkown-more">
                           А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="" class="artist-unkown-link  link-active">В галерею</a>
+                          <a class="artist-unkown-link  link-active" href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
                         </div>
                       </li>
                     </ul>
@@ -478,7 +499,7 @@
 
                 <li class="accordion-item">
                   <div class="accordion-title">
-                    <a class="accordion-title-link">C 1600 по 1699 гг.</a>
+                    <button class="accordion-title-link">C 1600 по 1699 гг.</button>
                   </div>
                   <div class="accordion-content">
                     <ul class="artist-unkown-item">
@@ -491,7 +512,7 @@
                           <h3 class="artist-unkown-title">Здесь пока пусто </h3>
                         <p class="artist-unkown-more">
                           А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="" class="artist-unkown-link  link-active">В галерею</a>
+                          <a class="artist-unkown-link  link-active" href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
                         </div>
                       </li>
                     </ul>
@@ -500,7 +521,7 @@
 
                 <li class="accordion-item">
                   <div class="accordion-title">
-                    <a class="accordion-title-link">C 1700 по 1799 гг.</a>
+                    <button class="accordion-title-link">C 1700 по 1799 гг.</button>
                   </div>
                   <div class="accordion-content">
                     <ul class="artist-unkown-item">
@@ -513,7 +534,7 @@
                           <h3 class="artist-unkown-title">Здесь пока пусто </h3>
                         <p class="artist-unkown-more">
                           А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="" class="artist-unkown-link  link-active">В галерею</a>
+                          <a class="artist-unkown-link  link-active" href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
                         </div>
                       </li>
                     </ul>
@@ -522,7 +543,7 @@
 
                 <li class="accordion-item">
                   <div class="accordion-title">
-                    <a class="accordion-title-link">C 1800 по 1899 гг.</a>
+                    <button class="accordion-title-link">C 1800 по 1899 гг.</button>
                   </div>
                   <div class="accordion-content">
                     <ul class="artist-unkown-item">
@@ -535,7 +556,7 @@
                           <h3 class="artist-unkown-title">Здесь пока пусто </h3>
                         <p class="artist-unkown-more">
                           А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="" class="artist-unkown-link  link-active">В галерею</a>
+                          <a class="artist-unkown-link  link-active" href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
                         </div>
                       </li>
                     </ul>
@@ -544,7 +565,7 @@
 
                 <li class="accordion-item">
                   <div class="accordion-title">
-                    <a class="accordion-title-link">C 1900 по 1999 гг.</a>
+                    <button class="accordion-title-link">C 1900 по 1999 гг.</button>
                   </div>
                   <div class="accordion-content">
                     <ul class="artist-unkown-item">
@@ -557,7 +578,7 @@
                           <h3 class="artist-unkown-title">Здесь пока пусто </h3>
                         <p class="artist-unkown-more">
                           А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="" class="artist-unkown-link  link-active">В галерею</a>
+                          <a class="artist-unkown-link  link-active" href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
                         </div>
                       </li>
                     </ul>
@@ -566,7 +587,7 @@
 
                 <li class="accordion-item accordion-item-last-child">
                   <div class="accordion-title">
-                    <a class="accordion-title-link">C 2000 г.</a>
+                    <button class="accordion-title-link">C 2000 г.</button>
                   </div>
                   <div class="accordion-content">
                     <ul class="artist-unkown-item">
@@ -579,7 +600,7 @@
                           <h3 class="artist-unkown-title">Здесь пока пусто </h3>
                         <p class="artist-unkown-more">
                           А в галерее вы всегда можете найти что-то интересное для себя</p>
-                          <a href="" class="artist-unkown-link  link-active">В галерею</a>
+                          <a class="artist-unkown-link  link-active" href="#gallery-section" onclick="slowScroll('#gallery-section')">В галерею</a>
                         </div>
                       </li>
                     </ul>
@@ -591,10 +612,13 @@
         </div>
       </section>  
 
-         <section class="event" id="event">  
+         <section class="event" id="event-section">  
           <div class="container event__container">
-            <h2 class="about-title">События</h2>
-                <div class="event-button-next ">
+            <h2 class="about-title event-title">События</h2>
+            <div class="swiper-button-prev events__btn-prev"></div>
+        <div class="swiper-button-next events__btn-next"></div>
+        <div class="swiper-pagination events__pagination"></div>
+                <!-- <div class="event-button-next ">
                   <svg class="button-next" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25 2.72191e-06C38.8071 2.11838e-06 50 11.1929 50 25C50 38.8071 38.8071 50 25 50C11.1929 50 -4.89256e-07 38.8071 -1.09278e-06 25C-1.69631e-06 11.1929 11.1929 3.32544e-06 25 2.72191e-06Z"
                       fill="#ECECEC"/>
@@ -609,11 +633,11 @@
                     <path d="M23.3333 16.6667L31.6667 25L23.3333 33.3333" stroke="black" />
                   </svg>
                     
-                </div>
+                </div> -->
               <div class="swiper mySwiper event-swiper">
                 
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide card-slide">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide card-slide">
                     <div class="event-card-image">
                         <img class="event-card-image-icon" src="/img/event/event-1.jpg" alt="">  
                     </div>
@@ -623,15 +647,15 @@
                         <span class="card-date">с 20 марта по 30 апреля</span>
                       
                       <h3 class="card-title">Книжная гравюра в живом восприятии</h3>
-                      <p class="card-discr">
-                        Один из&nbsp;ведущих <br> флорентийских художников Кватроченто, основатель художественной династии, <br> которую продолжили его брат Давид и&nbsp;сын Ридольфо.
+                      <p class="card-discr discr-1">
+                        Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,  которую продолжили его брат Давид и&nbsp;сын Ридольфо.
                       </p>
                       
                     </div>
                     <a href="" class=" link-active card-focus card-more">Подробнее</a>
                     </div>
-                  </div>
-                  <div class="swiper-slide card-slide">
+                  </li>
+                  <li class="swiper-slide card-slide">
                     <div class="event-card-image">
                       <img class="event-card-image-icon" src="/img/event/event-2.jpg" alt="">
                     </div>
@@ -639,31 +663,31 @@
                       <div class="event-date-text">
                         <span class="card-date">ММОМА</span>
                         <span class="card-date">24 марта 19:00</span>
-                      <h3 class="card-title">«Открытая дискуссия». <br> Дмитрий Петров <br> и Сергей Ильин.</h3>
-                      <p class="card-discr">
-                        Высокий уровень вовлечения представителей целевой <br> аудитории является четким доказательством простого <br> факта.
+                      <h3 class="card-title">«Открытая дискуссия». Дмитрий Петров  и Сергей Ильин.</h3>
+                      <p class="card-discr discr-2">
+                        Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
                       </p>
                     </div>
                     <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                  </div>
-                  <div class="swiper-slide card-slide">
+                  </li>
+                  <li class="swiper-slide card-slide">
                     <div class="event-card-image">
                       <img class="event-card-image-icon" src="/img/event/event-3.jpg" alt="">
                     </div>
-                    <div class="event-card-discr">
+                    <div class="event-card-discr ">
                       <div class="event-date-text">
                         <span class="card-date">Еврейский музей</span>
                         <span class="card-date">с 31 марта по 21 апреля</span>                 
                       <h3 class="card-title">Выставка «Формация 2020»</h3>
-                      <p class="card-discr">
+                      <p class="card-discr discr-3">
                         Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных.
                       </p>
                     </div>
                     <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                  </div>
-                  <div class="swiper-slide card-slide">
+                  </li>
+                  <li class="swiper-slide card-slide">
                     <div class="event-card-image">
                       <img class="event-card-image-icon" src="/img/event/event-4.jpg" alt="">
                     </div>
@@ -671,15 +695,15 @@
                       <div class="event-date-text">
                         <span class="card-date">Третьяковка на Крамском валу</span>
                         <span class="card-date">с 30 марта по 30 апреля</span>
-                      <h3 class="card-title"> Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-                      <p class="card-discr">
-                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
+                      <h3 class="card-title"> XXIV Международная биеннале молодого искусства</h3>
+                      <p class="card-discr discr-4">
+                        Внезапно, реплицированные с зарубежных источников, современные исследования.
                       </p>
                     </div>
                     <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                  </div>
-                  <div class="swiper-slide card-slide">
+                  </li>
+                  <li class="swiper-slide card-slide">
                     <div class="event-card-image">
                       <img class="event-card-image-icon" src="/img/event/event-5.jpg" alt="">
                     </div>
@@ -687,15 +711,15 @@
                       <div class="event-date-text">
                         <span class="card-date">ММАМ</span>
                         <span class="card-date">с 8 апреля по 20 мая</span>
-                      <h3 class="card-title">XXIV Международная биеннале молодого искусства</h3>
-                      <p class="card-discr">
-                        Внезапно, реплицированные с зарубежных источников, современные исследования.
+                      <h3 class="card-title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                      <p class="card-discr discr-5">
+                        Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
                       </p>
                     </div>
                     <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
             
           </div>
@@ -703,7 +727,7 @@
 
 
 
-         <section class="project" id="project">    
+         <section class="project" id="project-section">    
           <div class="container project__cintainer">
            <div class="project-intro"> 
               <h2 class="about-title project-title">Проекты</h2>
@@ -740,48 +764,38 @@
             </div> 
             <div class="project__slider">
               <div class="project-button">
-                <div class="project-button-next ">
-                  <svg class=" project-button-next" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#ECECEC"/>
-                    <path d="M14 20L19 15L14 10" stroke="black"/>
-                    </svg>                   
-                </div>         
-                <div class=" project-button-prev">
-                  <svg class=" project-button-prev" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#ECECEC"/>
-                    <path d="M16 20L11 15L16 10" stroke="black"/>
-                    </svg>
-                </div>
+                <div class="swiper-button-prev projects__btn-prev"></div>
+          <div class="swiper-button-next projects__btn-next"></div>
               </div>
               <div class="swiper mySwiper project-swiper">
                 <div class="swiper-wrapper project__slider-wraper">
-                  <div class="swiper-slide project__slider-slide">
+                  <a href="" class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-1" src="/img/project/project/project-1.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </ф>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-2" src="/img/project/project/project-2.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-3" src="/img/project/project/project-3.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-4" src="/img/project/project/project-4.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-5" src="/img/project/project/project-5.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-6" src="/img/project/project/project-6.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-7" src="/img/project/project/project-7.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-8" src="/img/project/project/project-8.png" alt="">
-                  </div>
-                  <div class="swiper-slide project__slider-slide">
+                  </a>
+                  <a href class="swiper-slide project__slider-slide">
                     <img class="slide-img slide-img-9" src="/img/project/project/project-9.png" alt="">
-                  </div>
+                  </a>
                 </div>
                
               </div>
@@ -791,7 +805,7 @@
           </div>
         </section>   
 
-          <section class="contact" id="contact">   
+          <section class="contact" id="contact-section">   
           <div class=" container contact__container">
             <div class="contact-adress">
               <h3 class="contact-title">
@@ -802,36 +816,38 @@
             <div class="footer-form">
               <div class="footer-form-item">
                 <div class="footer-form-list list-label">
-                  <form  action="https://jsonplaceholder.typicode.com/posts"  autocomplete method="POST" class="form form-footer">
-                    <label for="name">
-                      <input class="footer-form-input input-mobile" name="name" type="text" placeholder="Имя*" data-validate-field="name" id="name">
-                    </label>
-                    <label for="Mobile-number">
-                      <input class="footer-form-input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" id="Mobile-number">
+                  <form  action="https://jsonplaceholder.typicode.com/posts"  autocomplete method="POST" class="form form-footer contacts__form">
+                    <div class="footer-form-input-container">
+                      <label for="name">
+                        <input class="footer-form-input input-mobile contacts__input" name="name" type="text" placeholder="Имя*"  id="name">
+                      </label>
+                    <label for="tel">
+                      <input class="footer-form-input input-tel contacts__input" name="tel" type="tel" placeholder="Телефон*"  id="tel">
                     </label>
                     </div>
+                   
                     <div class="footer-form-list">
                     <button class="footer-button-sent outline-focus-footer footer-button-desktop">Заказать обратный звонок</button>
                     <button class="footer-button-sent outline-focus-footer footer-button-mobile">Заказать</button>
                     </div>
-                  
                   </form>
+                </div>
                 </div>
               
             </div>
             <div class="contact-icon">
                   
               <span class="contact-list-title">Связаться в один клик</span>
-              <ul class="contact-item">
-              <li class="contact-list">
+              <div class="contact-item">
+              <a href="#" class="contact-list">
                 <span class="social-icon">
                   <svg class="social-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z" fill="#30BF39"/>
                     <path d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z" fill="white"/>
                     </svg>                   
                 </span>
-              </li>
-              <li class="contact-list">
+              </a>
+              <a href="#" class="contact-list">
                 <span class="social-icon"> 
                     <svg class="social-svg" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear_57972_1461)"/>
@@ -844,8 +860,8 @@
                       </defs>
                       </svg>  
                 </span>
-              </li>
-            </ul>
+              </a>
+            </div>
           </div>
 
           </div>
@@ -893,12 +909,15 @@
 
 
     <!-- <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Fjkc9H0g3D7KykHB9pdznEWUplxAbBRv&width=100%&height=700&lang=ru_UA&sourceType=constructor"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script script  src =" https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList "></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" ></script>
     <script src="js/choices.min.js"></script>
     <script src="js/inputmask.min.js"> </script>
     <script src="js/just-validate.min.js"></script>
+    <script src="js/validate.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/accordion.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

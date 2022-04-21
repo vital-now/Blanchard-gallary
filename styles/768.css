@@ -1,0 +1,484 @@
+@media (max-width:768px) {
+  .header__container {
+      overflow: visible;
+  }
+
+  .header__top {
+    padding: 25px 0;
+  }
+
+  .bar1 {
+    width: 31px;
+}
+
+.bar2 {
+  width: 24px;
+}
+
+.bar3 {
+  width: 20px;
+}
+
+  .header__logo {
+      min-height: 42px;
+      width: 269px;
+  }
+  .logo {
+      min-height: 39px;
+      max-width: 167px;
+  }
+  .header__search-btn {
+    bottom: -2px;
+}
+.header__search-top {
+    width: 93%;
+    max-height: 100px;
+    top: 0px;
+    left: -34px;
+    padding: 30px 20px 36px 54px;
+    background-color: var(--black);
+    z-index: 45;
+}
+.header__search-button {
+    z-index: 99;
+}
+
+.header__find {
+  position: absolute;
+  left: 3px;
+}
+
+.header__form::before {
+  z-index: 25;
+  content: '';
+  position: absolute;
+  background: var(--black);
+  top: 10px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.header__form {
+  left: 6%;
+  width: 83%;
+}
+
+.header__input {
+  position: absolute;
+  right: 18px;
+  width: 523px;
+  height: 27px;
+  z-index: 27;
+}
+
+.header__search.active::before, .header__search.active::after {
+  top: 7px;
+}
+
+.burger {
+  margin-bottom: 4px;
+}
+  
+  .hero {
+    margin-bottom: 80px;
+  }
+
+  .hero-content {
+    padding: 91px 0 103px;
+  }
+
+  .hero-content__heading {
+      width: 100%;
+      line-height: 52px;
+      font-size: 66px;
+  }
+
+  .hero-content__desc {
+    font-size: 16.4px;
+    line-height: 32px;
+      width: 100%;
+      margin-bottom: 119px;
+      max-width: 700px;
+  }
+
+  .hero-content__btn {
+    margin-bottom: 0;
+    padding: 17px 36px;
+    font-size: 16px;
+  }
+
+  .hero-content__btn:focus::after {
+    min-height: 77px;
+  }
+
+  .about {
+    margin-bottom: 66px;
+  }
+
+  .about-title {
+    font-size: 44px;
+    margin-bottom: 17px;
+  }
+
+  .about-discription {
+    line-height: 29.1px;
+    font-size: 14.6px;
+    font-weight: 400;
+  }
+
+  .gallery {
+    margin-bottom: 31px;
+  }
+
+  .gallary-left-info {
+    width: 42.4%
+  }
+
+  .gallary-title {
+    padding-top: 67px;
+    font-size: 44px;
+    line-height: 75px;
+  }
+
+  .filter-span {
+  font-size: 15px;
+    line-height: 40px;
+  }
+
+  .gallery__right  {
+      max-width: 100%;
+      margin-top: 7px;
+      margin-bottom: 57px;
+  }
+
+  .choices__inner {
+    font-size: 15px;
+    min-height: 38px;
+    padding: 2.5px 4.5px 2.75px;
+  }
+
+  .choices[data-type*=select-one]::after {
+    height: 5px;
+    width: 5px;
+    right: 16.7px;
+    top: 47%;
+  }
+
+  .select {
+    margin-top: 3px;
+  }
+
+  .gallery__select {
+    margin-bottom: 33px;
+  }
+
+  .container-cat {
+    padding-left: 22px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .checkmark {
+    left: -1px;
+    height: 13px;
+    width: 13px;
+  }
+
+  .container-cat .checkmark:after {
+    left: 3.5px;
+    top: 3.7px;
+  }
+
+  .gallary-swiper {
+    max-width: 100%;
+  }
+
+  .slider-button {
+    width: 120px;
+    margin-top: 41px;
+    margin-bottom: 19px;
+}
+
+.swiper-pagination {
+  font-size: 14px;
+    line-height: 4px;
+}
+
+    .gallary-content {
+      flex-direction: column;
+    }
+
+    .gallary-swiper-slide {
+      height: 299px;
+    }
+
+    .faq {
+      padding-top: 50px;
+      margin-bottom: 51px;
+    }
+
+    .faq-intro {
+      margin-bottom: 27px;
+    }
+
+    .accordion-title-link {
+      font-size: 22px;
+      line-height: 47px;
+    }
+
+    .accordionjs .acc_section .acc_content {
+      padding: 26px 0 0 0;
+    }
+
+    .accordionjs .acc_section.acc_active > .acc_content {
+      padding-bottom: 11px;
+    }
+
+    .artist-link {
+      font-weight: 400;
+      font-size: 14px;
+  }
+
+  .link-title-main {
+    line-height: 41px;
+  }
+
+    .accordionjs .acc_section .acc_head {
+      padding-top: 23px;
+      padding-bottom: 34px;
+    }
+
+
+    .artist-item {
+      margin-bottom: 33px;
+      column-count: 3;
+      }
+
+    .tab-content__item {
+      width: 100%;
+    }
+
+    .faq__content-left-info {
+      width: 100%;
+    }
+
+    .accordionjs .acc_section.acc_active > .acc_content {
+      width: 100%;
+      padding: 19px 0 15px 0;
+    }
+
+    .tab-content-image {
+      width: 100%;
+    }
+
+    .artist-unkown-image {
+      width: 173px;
+      height: 114px;
+    }
+
+    /* .acc_active::after {
+      top: 11%;
+    } */
+
+    .accordionjs .acc_section.acc_active > .acc_content {
+      height: 100%;
+    }
+
+ 
+    .faq__contant  {
+      flex-direction: column-reverse;
+    }
+
+    .accordion-item {
+      width: 100%;
+    }
+
+    .faq__accordion {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .left-info-title {
+    font-size: 22px;
+  }
+
+    .left-info-years {
+      font-size: 11px;
+    line-height: 21px;
+  }
+
+  .left-info-discr {
+    font-size: 14px;
+    line-height: 33px;
+    }
+
+    .event {
+      margin-bottom: 118px;
+    }
+
+    .event-swiper {
+      max-width: 100%;
+    }
+
+    .card-slide {
+      height: 624px;
+    }
+
+
+
+    .event-card-discr {
+      width: 100%;
+      padding-right: 2px;
+    }
+
+    .event-card-image {
+      height: 100%;
+    }
+
+    .event-date-text {margin-top: 16px;
+      width: 100%;
+    }
+
+    .card-title {
+      font-size: 22px;
+      padding-top: 10px;
+    }
+
+    .event-card-discr {
+      padding-left: 33px;
+    }
+
+    .card-discr {
+      width: 99%;
+      font-size: 14px;
+      line-height: 27px;
+      margin-bottom: 66px;
+    }
+
+    .card-more {
+      width: 76.5px;
+      font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid var(--amethyst);
+    }
+
+    .card-date:not(:last-child) {
+      padding-top: 5px;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 8px;
+    }
+
+    .event-pagination {
+      top: 104%;
+    }
+
+    .project {
+      margin-bottom: 72px;
+    }
+
+    .projects-descr {
+      font-size: 14.5px;
+      margin-bottom: 24px;
+      line-height: 29px;
+    }
+
+    .project-partners-title {
+      font-size: 22px;
+    }
+
+    .project-button-next, .swiper-rtl {
+      right: -20px;
+    }
+
+    .project-button-prev, .swiper-rtl {
+      left: -20px;
+    }
+
+    .project-button-next, .project-button-prev {
+      top: 28%;
+      width: 26px;
+      height: 26px;
+    }
+
+    .project__slider-slide {
+      height: 95px;
+    }
+
+    .project__slider {
+      margin: 0 42px;
+    }
+
+    .slide-img {
+   max-width: 80%;
+    }
+
+
+    .contact-title {
+      margin-top: 40px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    .contact-discr {
+      font-size: 14.5px;
+      line-height: 0;
+    }
+
+    .contact-adress {
+      margin-bottom: 28px;
+    }
+
+    .footer-form-input {
+      width: 295px;
+      height: 46px;
+      margin-right: 18px;
+    }
+
+    .form-footer {
+      height: 45px;
+      flex-direction: column;
+      align-items: initial;
+    }
+
+    .footer-form-item {
+      margin-bottom: 0;
+      height: 122px;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .list-label {
+      height:56px;
+    }
+
+    .footer-button-sent {
+      padding: 7px 28px;
+    }
+
+    .contact-icon {
+      margin-top: 12px;
+      margin-bottom: 31px;
+    }
+
+    .contact-list-title {
+      font-size:  22px;
+    }
+
+    .contact-list:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    .social-svg {
+      width: 38px;
+      height: 36px;
+    }
+
+    .js-validate-error-label {
+      top: -16px;
+    }
+
+  }

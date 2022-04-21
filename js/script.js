@@ -84,6 +84,22 @@ document.addEventListener("click", function(e) {
 
 // };
 
+function scrollClick(butt, sect) {
+  $(function () {
+    $(butt).on('click', function (e) {
+      $('html,body').stop().animate({ scrollTop: $(sect).offset().top }, 1000);
+      e.preventDefault();
+    });
+  });
+}
+scrollClick('#about', '#first-section')
+scrollClick('#gallery', '#second-section')
+scrollClick('#faq', '#third-section')
+scrollClick('#event', '#fourth-section')
+scrollClick('#project', '#fiveth-section')
+scrollClick('#contact', '#sixth-section')
+
+
 
 // select();
 const defaultSelect = () => {
@@ -105,12 +121,12 @@ var swiper = new Swiper(".gallary-swiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".gallery__pagination",
     type: "fraction",
   },
   navigation: {
-    nextEl: '.gallary-button-next',
-    prevEl: '.gallary-button-prev',
+    nextEl: '.gallery__btn-next',
+    prevEl: '.gallery__btn-prev',
     
 },
 breakpoints: {
@@ -196,15 +212,23 @@ breakpoints: {
 
 
 // Swiper-event
-    var swiper = new Swiper(".event-swiper", {
+    
+
+
+
+var swiper = new Swiper(".event-swiper", {
       slidesPerView: 3,
       spaceBetween: 50,
       
 
       breakpoints: {
-        1024: {
+        1025: {
           slidesPerView: 3,
           spaceBetween: 50,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
         },
 
         900: {
@@ -214,18 +238,18 @@ breakpoints: {
 
         600: {
           slidesPerView: 2,
-          spaceBetween: 10, 
+          spaceBetween: 32, 
         },
         100: {
           slidesPerView: 1,
         }
       },
       navigation: {
-        nextEl: '.event-button-next',
-        prevEl: '.event-button-prev',
+        nextEl: '.events__btn-next',
+        prevEl: '.events__btn-prev',
     },
     pagination: {
-      el: ".event-pagination",
+      el: ".events__pagination",
       clickable: true,
   },
     });
@@ -237,8 +261,8 @@ breakpoints: {
       slidesPerView: 3,
       spaceBetween: 30,
       navigation: {
-        nextEl: ".project-button-next",
-        prevEl: ".project-button-prev",
+        nextEl: ".projects__btn-next",
+        prevEl: ".projects__btn-prev",
       },
 
       breakpoints: {
@@ -253,47 +277,122 @@ breakpoints: {
       
         1000: {
           slidesPerView: 2,
-          spaceBetween: 30,
+          spaceBetween: 44,
         },
         640: {
           slidesPerView: 2,
         },
         100: {
           slidesPerView: 1,
+          spaceBetween: 25,
         }
       }
     });
 
 
 //  Form-imput-mask
+// var selector = document.querySelector("input[type='tel']");
+// var im = new Inputmask("+7 (999)-999-99-99");
+// im.mask(selector);
+
+// new JustValidate('.form', {
+//     rules: {
+//         name: {
+//             required: true,
+//             minLength: 2,
+//             maxLength: 30
+//         }, 
+
+//         messages: {
+//           text1: {
+//             tel: "Пожалуйста введите корректные данные",
+//             name: "Введите корректное имя",
+//           }
+//         },
+//         tel: {
+//             required: true,
+//             function: (name, value) => {
+//                 const phone = selector.inputmask.unmaskedvalue()
+//                 console.log(phone)
+//                 return Number(phone) && phone.length === 10
+//             }
+//         }, 
+//     },
+// });
+
 var selector = document.querySelector("input[type='tel']");
-var im = new Inputmask("+7 (999)-999-99-99");
+var im = new Inputmask("+7 (999) 999-99-99");
 im.mask(selector);
 
-new JustValidate('.form', {
-    rules: {
-        name: {
-            required: true,
-            minLength: 2,
-            maxLength: 30
-        }, 
-
-        messages: {
-          text1: {
-            tel: "Пожалуйста введите корректные данные",
-            name: "Введите корректное имя",
-          }
-        },
-        tel: {
-            required: true,
-            function: (name, value) => {
-                const phone = selector.inputmask.unmaskedvalue()
-                console.log(phone)
-                return Number(phone) && phone.length === 10
-            }
-        }, 
+const validation = new JustValidate(
+  '.contacts__form',
+  {
+    errorLabelCssClass: 'is-label-invalid',
+    errorLabelStyle: {
+      color: '#D11616',
     },
-});
+    position: 'top',
+  },
+);
+
+validation
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите ваше имя',
+    },
+    {
+      rule: 'customRegexp',
+      value: /^[-a-zA-Z\u0410-\u044F`]+$/,
+      errorMessage: 'Недопустимый формат',
+    },
+    {
+      rule: 'minLength',
+      value: 2,
+      errorMessage: 'Не менее 2 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Не более 30 символов',
+    },
+  ])
+  .addField('#tel', [
+    {
+      rule: 'required',
+      errorMessage: 'Укажите ваш телефон',
+    },
+    {
+      validator: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue();
+        return Number(phone) && phone.length === 10;
+      },
+      errorMessage: 'Недопустимый формат',
+    },
+  ])
+  .onSuccess((event) => {
+    console.log('Валидация прошла успешно!', event);
+
+    let formData = new FormData(event.target);
+
+    console.log(...formData);
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log('Отправлено');
+          alert("Форма отправлена!");
+        }
+      }
+    }
+
+    xhr.open('POST', 'mail.php', true);
+    xhr.send(formData);
+
+    event.target.reset();
+  });
 
 // Map
 function init() {
@@ -336,6 +435,7 @@ document.querySelector('.burger').addEventListener('click', function () {
   document.querySelector('.burger').classList.toggle('burger--open')
   document.querySelector('.header__nav').classList.toggle('header__nav--hidden')
   document.querySelector('.header__enter').classList.toggle('header__enter--hidden')
+  document.querySelector('body').classList.toggle("overflow");
 })
 
 
@@ -400,10 +500,16 @@ const swiperHero = new Swiper(".hero-swiper", {
   },
 });
 
-$('a[href^="#"').on('click', function() {
-  let href = $(this).attr('href');
-  $('html, body').animate({
-      scrollTop: $(href).offset().top
-  });
-  return false;
-});
+function slowScroll(id) { 
+  var offset = 0;
+  $('html, body').animate({ 
+       scrollTop: $(id).offset().top - offset 
+  }, 1000);
+  return false; 
+} 
+
+if (window.applyFocusVisiblePolyfill != null) {
+  window.applyFocusVisiblePolyfill(myComponent.shadowRoot);
+}
+
+
