@@ -121,12 +121,12 @@ var swiper = new Swiper(".gallary-swiper", {
   slidesPerView: 3,
   spaceBetween: 30,
   pagination: {
-    el: ".gallery__pagination",
+    el: ".gallery-pagination",
     type: "fraction",
   },
   navigation: {
-    nextEl: '.gallery__btn-next',
-    prevEl: '.gallery__btn-prev',
+    nextEl: '.gallery-btn-next',
+    prevEl: '.gallery-btn-prev',
     
 },
 breakpoints: {
@@ -245,11 +245,11 @@ var swiper = new Swiper(".event-swiper", {
         }
       },
       navigation: {
-        nextEl: '.events__btn-next',
-        prevEl: '.events__btn-prev',
+        nextEl: '.events-btn-next',
+        prevEl: '.events-btn-prev',
     },
     pagination: {
-      el: ".events__pagination",
+      el: ".events-pagination",
       clickable: true,
   },
     });
@@ -261,8 +261,8 @@ var swiper = new Swiper(".event-swiper", {
       slidesPerView: 3,
       spaceBetween: 30,
       navigation: {
-        nextEl: ".projects__btn-next",
-        prevEl: ".projects__btn-prev",
+        nextEl: ".projects-btn-next",
+        prevEl: ".projects-btn-prev",
       },
 
       breakpoints: {
@@ -325,7 +325,7 @@ var im = new Inputmask("+7 (999) 999-99-99");
 im.mask(selector);
 
 const validation = new JustValidate(
-  '.contacts__form',
+  '.contacts-form',
   {
     errorLabelCssClass: 'is-label-invalid',
     errorLabelStyle: {

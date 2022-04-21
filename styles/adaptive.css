@@ -117,7 +117,7 @@
     display: none;
   }
   
-  .header__enter_link {
+  .header__enter-link {
     margin-left: auto;
     margin-right: 0;
     color: var(--white);
@@ -127,22 +127,22 @@
     line-height: 25px;
   }
   
-  .header__enter_link:hover {
+  .header__enter-link:hover {
     color: var(--viola);
   }
   
-  .header__enter_link:active {
+  .header__enter-link:active {
     color: var(--amethyst);
   }
 
-  .header__enter_link:hover .main-nav-icon path {
+  .header__enter-link:hover .main-nav-icon path {
     cursor: pointer;
     fill: var(--viola);
     stroke: none;
     transition: fill .2s ease-in-out;
   }
 
-  .header__enter_link:active .main-nav-icon path {
+  .header__enter-link:active .main-nav-icon path {
     cursor: pointer;
     fill: var(--amethyst);
     stroke: none;
@@ -454,7 +454,7 @@
   .header__input {
     width: 71%;
   }
-  .header__enter_link {
+  .header__enter-link {
     display: none;
   }
   .header__bottom {
@@ -899,19 +899,19 @@
   border-bottom: 2px solid var(--amethyst);
   }
 
-  .events__pagination {
+  .events-pagination {
     position: absolute;
     display: block;
     text-align: center;
     top: 102%;
   }
 
-  .events__pagination {
+  .events-pagination {
     display: block;
   }
 
-  .events__btn-prev,
-  .events__btn-next {
+  .events-btn-prev,
+  .events-btn-next {
     display: none;
   }
 
@@ -954,15 +954,15 @@
     max-width: 72%;
   }
 
-  .projects__btn-prev, .swiper-rtl .projects__btn-next {
+  .projects-btn-prev, .swiper-rtl .projects-btn-next {
     left: -51px;
   }
 
-  .projects__btn-next, .projects__btn-prev {
+  .projects-btn-next, .projects-btn-prev {
     top: 39%;
   }
 
-  .projects__btn-next, .swiper-rtl .projects__btn-prev {
+  .projects-btn-next, .swiper-rtl .projects-btn-prev {
     right: -51px;
   }
 
@@ -1523,7 +1523,7 @@
       line-height: 8px;
     }
 
-    .events__pagination {
+    .events-pagination {
       top: 104%;
     }
 
@@ -2361,7 +2361,7 @@
     margin-bottom: 45px;
   }
 
-  .events__pagination {
+  .events-pagination {
     top: 103%;
   }
   
@@ -2417,7 +2417,7 @@
     max-width: 72%;
   }
   
-  .projects__btn-next, .projects__btn-prev {
+  .projects-btn-next, .projects-btn-prev {
     top: 28%;
   }
   
