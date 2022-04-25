@@ -24,22 +24,24 @@
 
             </button>
             <a class="header__logo " href="#"><img class="logo" src="/img/header/logo-1920.png" alt="Логотип Blanchard"></a>
-                <nav class="main-nav header-nav header__nav header__nav--hidden header__enter">
-                  <ul class="header-nav__list">
-                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#about-section" onclick="slowScroll('#about-section')">О нас</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#gallery-section" onclick="slowScroll('#gallery-section')">Галерея</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#faq-section" onclick="slowScroll('#faq-section')">Каталог</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#event-section" onclick="slowScroll('#event-section')">События</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#project-section" onclick="slowScroll('#project-section')">Проекты</a></li>
-                    <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#contact-section" onclick="slowScroll('#contact-section')">Контакты</a></li>
-                  </ul>
-                  <button class="header__nav-btn header__nav-link    main-nav__enter burger-enter btn" aria-label="Войти под своим логином" tabindex="0">
-                    <svg class="main-nav-icon burger-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
-                      </svg>
-                       Войти
-                  </button>
-                </nav>
+            <div class="burger-cont header__nav--hidden">
+              <nav class="main-nav header-nav header__nav  header__enter">
+                <ul class="header-nav__list">
+                  <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#about-section" onclick="slowScroll('#about-section')">О нас</a></li>
+                  <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#gallery-section" onclick="slowScroll('#gallery-section')">Галерея</a></li>
+                  <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#faq-section" onclick="slowScroll('#faq-section')">Каталог</a></li>
+                  <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#event-section" onclick="slowScroll('#event-section')">События</a></li>
+                  <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#project-section" onclick="slowScroll('#project-section')">Проекты</a></li>
+                  <li class="header-nav__item"><a class="header__nav-btn  header__nav-link" href="#contact-section" onclick="slowScroll('#contact-section')">Контакты</a></li>
+                </ul>
+                <button class="header__nav-btn header__nav-link    main-nav__enter burger-enter btn" aria-label="Войти под своим логином" tabindex="0">
+                  <svg class="main-nav-icon burger-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+                    </svg>
+                     Войти
+                </button>
+              </nav>
+            </div>
         
             <a class="header__nav-btn header__nav-link header__enter-link  header__nav-link" aria-label="Войти под своим логином" tabindex="0"> 
               <svg class="main-nav-icon" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -638,10 +640,10 @@
                 
                 <ul class="swiper-wrapper">
                   <li class="swiper-slide card-slide">
-                    <div class="event-card-image">
+                    <!-- <div class="event-card-image"> -->
                         <img class="event-card-image-icon" src="/img/event/event-1.jpg" alt="">  
-                    </div>
-                    <div class="event-card-discr">
+                    <!-- </div> -->
+                    <!-- <div class="event-card-discr"> -->
                       <div class="event-date-text">
                         <span class="card-date">Музей им. Щусева</span>
                         <span class="card-date">с 20 марта по 30 апреля</span>
@@ -650,16 +652,16 @@
                       <p class="card-discr discr-1">
                         Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии,  которую продолжили его брат Давид и&nbsp;сын Ридольфо.
                       </p>
-                      
+                      <a href="" class=" link-active card-focus card-more">Подробнее</a>
                     </div>
-                    <a href="" class=" link-active card-focus card-more">Подробнее</a>
-                    </div>
+                   
+                    <!-- </div> -->
                   </li>
                   <li class="swiper-slide card-slide">
-                    <div class="event-card-image">
+                    <!-- <div class="event-card-image"> -->
                       <img class="event-card-image-icon" src="/img/event/event-2.jpg" alt="">
-                    </div>
-                    <div class="event-card-discr">
+                    <!-- </div> -->
+                    <!-- <div class="event-card-discr"> -->
                       <div class="event-date-text">
                         <span class="card-date">ММОМА</span>
                         <span class="card-date">24 марта 19:00</span>
@@ -667,15 +669,16 @@
                       <p class="card-discr discr-2">
                         Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.
                       </p>
+                      <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                    <a href="" class="card-more link-active">Подробнее</a>
-                    </div>
+                   
+                    <!-- </div> -->
                   </li>
                   <li class="swiper-slide card-slide">
-                    <div class="event-card-image">
+                    <!-- <div class="event-card-image"> -->
                       <img class="event-card-image-icon" src="/img/event/event-3.jpg" alt="">
-                    </div>
-                    <div class="event-card-discr ">
+                    <!-- </div> -->
+                    <!-- <div class="event-card-discr "> -->
                       <div class="event-date-text">
                         <span class="card-date">Еврейский музей</span>
                         <span class="card-date">с 31 марта по 21 апреля</span>                 
@@ -683,15 +686,16 @@
                       <p class="card-discr discr-3">
                         Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных.
                       </p>
+                      <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                    <a href="" class="card-more link-active">Подробнее</a>
-                    </div>
+                    
+                    <!-- </div> -->
                   </li>
                   <li class="swiper-slide card-slide">
-                    <div class="event-card-image">
+                    <!-- <div class="event-card-image"> -->
                       <img class="event-card-image-icon" src="/img/event/event-4.jpg" alt="">
-                    </div>
-                    <div class="event-card-discr">
+                    <!-- </div> -->
+                    <!-- <div class="event-card-discr"> -->
                       <div class="event-date-text">
                         <span class="card-date">Третьяковка на Крамском валу</span>
                         <span class="card-date">с 30 марта по 30 апреля</span>
@@ -699,15 +703,16 @@
                       <p class="card-discr discr-4">
                         Внезапно, реплицированные с зарубежных источников, современные исследования.
                       </p>
+                      <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                    <a href="" class="card-more link-active">Подробнее</a>
-                    </div>
+                    
+                    <!-- </div> -->
                   </li>
                   <li class="swiper-slide card-slide">
-                    <div class="event-card-image">
+                    <!-- <div class="event-card-image"> -->
                       <img class="event-card-image-icon" src="/img/event/event-5.jpg" alt="">
-                    </div>
-                    <div class="event-card-discr">
+                    <!-- </div> -->
+                    <!-- <div class="event-card-discr"> -->
                       <div class="event-date-text">
                         <span class="card-date">ММАМ</span>
                         <span class="card-date">с 8 апреля по 20 мая</span>
@@ -715,9 +720,10 @@
                       <p class="card-discr discr-5">
                         Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.
                       </p>
+                      <a href="" class="card-more link-active">Подробнее</a>
                     </div>
-                    <a href="" class="card-more link-active">Подробнее</a>
-                    </div>
+                    
+                    <!-- </div> -->
                   </li>
                 </ul>
               </div>

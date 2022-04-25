@@ -210,6 +210,10 @@ breakpoints: {
       });
     }
 
+    $(".artist-list  button").click(function () {
+      $(".artist-link").removeClass("artist-active");
+      $(this).addClass("artist-active");
+    });
 
 // Swiper-event
     
@@ -433,8 +437,8 @@ ymaps.ready(init);
 
 document.querySelector('.burger').addEventListener('click', function () {
   document.querySelector('.burger').classList.toggle('burger--open')
-  document.querySelector('.header__nav').classList.toggle('header__nav--hidden')
-  document.querySelector('.header__enter').classList.toggle('header__enter--hidden')
+  document.querySelector('.burger-cont').classList.toggle('header__nav--hidden')
+  document.querySelector('.burger-cont').classList.toggle('header__enter--hidden')
   document.querySelector('body').classList.toggle("overflow");
 })
 
