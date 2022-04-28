@@ -135,40 +135,37 @@ breakpoints: {
   //   spaceBetween: 50,
   // }, 
   1500: {
-    slidesPerGroup:3,
     slidesPerView: 3,
     spaceBetween: 50,
   },
-  1300: {
-    slidesPerGroup:3,
+  1100: {
+    
     slidesPerView: 3,
     spaceBetween: 34,
   },
 
   1000: {
-    slidesPerGroup:2,
+    
     slidesPerView: 2,
     spaceBetween: 30,
   },
   767: {
-    slidesPerGroup:2,
+    
     slidesPerView: 2,
     spaceBetween: 39,
   },
   600: {
-    slidesPerGroup:2,
+  
     slidesPerView: 2,
     spaceBetween: 39
   },
 
   450: {
-    slidesPerGroup:2,
     slidesPerView: 2,
     spaceBetween: 30
   },
 
   100: {
-    slidesPerGroup: 1,
     slidesPerView: 1,
   }
 }
@@ -429,18 +426,30 @@ ymaps.ready(init);
 
 
 // Burger
-// document.addEventListener('DOMContentLoaded', function() {
-//   document.querySelector('.header__burger').addEventListener('click', function() {
-//     document.querySelector('.main-nav').classList.toggle('burger__active')
-//   });
-// });
 
-document.querySelector('.burger').addEventListener('click', function () {
+
+document.querySelector('.burger', 'header__nav-btn').addEventListener('click', function () {
   document.querySelector('.burger').classList.toggle('burger--open')
   document.querySelector('.burger-cont').classList.toggle('header__nav--hidden')
   document.querySelector('.burger-cont').classList.toggle('header__enter--hidden')
   document.querySelector('body').classList.toggle("overflow");
 })
+
+
+$(document).ready(function() {
+  $('.header__nav-btn').click(function(event) {
+      $('.header__burger').removeClass('burger--open');
+      $('body').removeClass('lock')
+  });
+});
+
+$(document).ready(function() {
+  $('.header__nav-btn').click(function(event) {
+      $('.burger-cont').toggleClass('header__nav--hidden');
+      $('body').removeClass('lock')
+  });
+});
+
 
 
 // Search-mobile
@@ -500,7 +509,7 @@ const swiperHero = new Swiper(".hero-swiper", {
   speed: 500,
 
   autoplay: {
-      delay: 7000,
+      delay: 2000,
   },
 });
 
