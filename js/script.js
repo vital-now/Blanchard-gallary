@@ -430,7 +430,7 @@ ymaps.ready(init);
 
 document.querySelector('.burger', 'header__nav-btn').addEventListener('click', function () {
   document.querySelector('.burger').classList.toggle('burger--open')
-  document.querySelector('.burger-cont').classList.toggle('header__nav--hidden')
+  document.querySelector('.burger-cont').classList.toggle('header-nav-hidden')
   document.querySelector('.burger-cont').classList.toggle('header__enter--hidden')
   document.querySelector('body').classList.toggle("overflow");
 })
@@ -445,7 +445,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('.header__nav-btn').click(function(event) {
-      $('.burger-cont').toggleClass('header__nav--hidden');
+      $('.burger-cont').toggleClass('header-nav-hidden');
       $('body').removeClass('lock')
   });
 });

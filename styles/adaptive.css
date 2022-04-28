@@ -598,7 +598,7 @@
   }
 
 
-  .header__nav--hidden {
+  .header-nav-hidden {
     visibility: hidden;
     transform: translateY(-768px);
   }
